@@ -30,8 +30,8 @@ public class week2 {
         }
 
 
-        System.out.println("========================================");
-        System.out.println("Welcome to long john silver, I am going to take your order now: ");
+        print("========================================");
+        print("Welcome to the Behind-The-Door Break Room Cafe!");
 
 
         while (start < 2) {
@@ -47,12 +47,12 @@ public class week2 {
             totalpricez += foodprice + "";
 
 
-            System.out.println("Taxable? Yes or No: ");
+            System.out.println("Taxable? True or False:");
             tax = keyboard.next();
-            if (tax.contains("yes")) {
+            if (tax.contains("true")) {
                 ajax = "yes";
                 rando = foodprice * rando + foodprice;
-            } else if (tax.contains("no")) {
+            } else if (tax.contains("false")) {
                 ajax = "no";
                 lando = foodprice * 0.05 + foodprice;
             }totaltax += lando;
@@ -75,18 +75,22 @@ public class week2 {
 
         }
 
-        System.out.println("Item Name \t Quantity \t Price \t Taxable");
-        System.out.println(mainblock);
-        System.out.print("Sub-Total: $" + totalprice + "\n");
-        System.out.println("Total rate: " + bando);
-        System.out.print("Sales Tax $" + totaltax + "\n");
+        print("Item Name \t Quantity \t Price \t Taxable");
+        print(mainblock);
+        print("Sub-Total: $" + totalprice + "\n");
+        print("Total rate: " + bando);
+        print("Sales Tax $" + totaltax + "\n");
 
 
-        System.out.println("_________________________________");
+        print("_________________________________");
         double totaltotal = totalprice + rando;
-        System.out.println("Total: " + totaltotal);
+        print("Total: " + totaltotal);
 
     }
 
+    static void print(String printer){
+        System.out.println( printer);
+
+    }
 
 }
